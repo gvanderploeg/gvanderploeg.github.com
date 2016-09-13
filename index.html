@@ -29,6 +29,79 @@
 <p>This page serves as the starting point for all of my Github projects. Some can be showcased here, others require a local setup.</p>
 
 <h3>
+<a id="liferay-openid-connect-plugin" class="anchor" href="#liferay-openid-connect-plugin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Liferay OpenID Connect plugin</h3>
+
+<p>Configuration:</p>
+
+<h3>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration</h3>
+
+<p>The following portal properties are required (in portal-ext.properties) for a complete setup:</p>
+
+<h4>
+<a id="openidconnectenableopenidconnect" class="anchor" href="#openidconnectenableopenidconnect" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>openidconnect.enableOpenIDConnect</code>
+</h4>
+
+<p>Whether to enable the plugin (effectively allowing you to disable the plugin without uninstalling it). Boolean, either 'true' or 'false'. Default is false.</p>
+
+<h4>
+<a id="openidconnectauthorization-location" class="anchor" href="#openidconnectauthorization-location" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>openidconnect.authorization-location</code>
+</h4>
+
+<p>Complete url to the OpenID Connect Provider's authorization location. Example for Google: <code>https://accounts.google.com/o/oauth2/v2/auth</code></p>
+
+<h4>
+<a id="openidconnecttoken-location" class="anchor" href="#openidconnecttoken-location" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>openidconnect.token-location</code>
+</h4>
+
+<p>Complete url to the OpenID Connect Provider's token location. Example for Google: <code>https://www.googleapis.com/oauth2/v4/token</code></p>
+
+<h4>
+<a id="openidconnectprofile-uri" class="anchor" href="#openidconnectprofile-uri" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>openidconnect.profile-uri</code>
+</h4>
+
+<p>Complete URL to the 'user info' endpoint. Example for Google: <code>https://www.googleapis.com/plus/v1/people/me/openIdConnect</code></p>
+
+<h4>
+<a id="openidconnectissuer" class="anchor" href="#openidconnectissuer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>openidconnect.issuer</code>
+</h4>
+
+<p>The information retrieved from the user info endpoint has to be verified against a preconfigured string, according to the OpenID Connect spec.
+This 'issuer' claim is used for that. Example for Google: <code>https://accounts.google.com</code></p>
+
+<h4>
+<a id="openidconnectclient-id" class="anchor" href="#openidconnectclient-id" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>openidconnect.client-id</code>
+</h4>
+
+<p>Register your Liferay portal as a 'client app' with the Google developer console, and the resulting client id is the openid connect client id.
+Non-working example for Google: <code>7kasuf1-123123adfaafdsflni7me2kr.apps.googleusercontent.com</code></p>
+
+<h4>
+<a id="openidconnectsecret" class="anchor" href="#openidconnectsecret" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>openidconnect.secret</code>
+</h4>
+
+<p>Secret of the client, after registration of the Liferay portal, just like the client-id.</p>
+
+<h3>
+<a id="openidconnectscope" class="anchor" href="#openidconnectscope" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>openidconnect.scope</code>
+</h3>
+
+<p>Scope(s) of the access token (space separated), should be the same (or a subset) of the scopes allowed by the provider to the client. Default value: <code>openid profile email</code></p>
+
+<h3>
+<a id="complete-copy-paste-friendly-code-block-with-all-properties" class="anchor" href="#complete-copy-paste-friendly-code-block-with-all-properties" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Complete copy-paste-friendly code block with all properties</h3>
+
+<pre><code>openidconnect.enableOpenIDConnect=true
+openidconnect.token-location=https://www.googleapis.com/oauth2/v4/token
+openidconnect.authorization-location=https://accounts.google.com/o/oauth2/v2/auth
+openidconnect.profile-uri=https://www.googleapis.com/plus/v1/people/me/openIdConnect
+openidconnect.issuer=https://accounts.google.com
+openidconnect.client-id=7kasuf1-123123adfaafdsflni7me2kr.apps.googleusercontent.com
+openidconnect.secret=xyz
+openidconnect.scope=openid profile email
+</code></pre>
+
+<h3>
 <a id="banner-maven-plugin" class="anchor" href="#banner-maven-plugin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="http://github.com/gvanderploeg/banner-maven-plugin">Banner maven plugin</a>
 </h3>
 
