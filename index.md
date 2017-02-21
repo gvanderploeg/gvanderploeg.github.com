@@ -9,7 +9,7 @@ And I wonder why NOS did not choose that path originally when creating/maintaini
 
 ### Liferay OpenID Connect plugin
 
-Refer to the [configuration documentation](/liferay-oidc-configuration.html).
+For configuration documentation of the Liferay OpenID Connect plugin, refer to [the new location at Finalist](https://github.com/finalist/liferay-oidc-plugin).
 
 ### [Banner maven plugin](http://github.com/gvanderploeg/banner-maven-plugin)
 Some things are best explained with an example:
