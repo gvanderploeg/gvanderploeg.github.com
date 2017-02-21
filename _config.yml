@@ -1,0 +1,8 @@
+title: gvanderploeg.github.com
+description: gvanderploeg.github.com
+google_analytics: UA-85522602-1
+show_downloads: true
+theme: jekyll-theme-minimal
+
+gems:
+  - jekyll-mentions
